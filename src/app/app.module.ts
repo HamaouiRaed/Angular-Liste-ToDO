@@ -7,8 +7,7 @@ import { AppComponent } from './app.component';
 import {FormsModule} from '@angular/forms';
 import { HomeTodoComponent } from './home-todo/home-todo.component';
 import { TodoComponent } from './todo/todo.component';
-
-
+import {HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
@@ -20,7 +19,8 @@ import { AppRoutingModule } from './app-routing.module';
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [{provide: APP_BASE_HREF, useValue:'/'}],
   bootstrap: [AppComponent]
