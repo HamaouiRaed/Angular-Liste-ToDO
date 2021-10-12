@@ -1,0 +1,6 @@
+<div class="row">
+    <app-todo *ngFor="let t of listTodo" [todo]="t"
+              (event)="changeEtat($event)"
+              class="col-md-3">
+    </app-todo>
+</div>
