@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Todo} from '../model/todo';
+import { StatCaluculService } from '../services/stat-calucul.service';
 
 @Component({
   selector: 'app-home-todo',
@@ -8,7 +9,10 @@ import {Todo} from '../model/todo';
 })
 export class HomeTodoComponent implements OnInit {
   listTodo: Todo[];
-  constructor() { }
+  StatValue!:number;
+  n!:number;
+
+  constructor(private calcul:StatCaluculService) { }
 
   ngOnInit(): void {
     this.listTodo = [
@@ -21,6 +25,12 @@ export class HomeTodoComponent implements OnInit {
   changeEtat(t: Todo){
     let i = this.listTodo.indexOf(t);
     this.listTodo[i].completed = true;
+  }
+  getStatService(){
+    for (let i in this.listTodo){
+      this.StatValue=this.calcul.getStat(this.listTodo, 'completed', true);
+
+    }
   }
 
 }
