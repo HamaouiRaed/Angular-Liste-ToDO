@@ -1,11 +1,12 @@
-
-
+<button  id="statservice"class="btn btn-primary" (click)="getStatService()">get statistics SERVICE</button>
+<h1>{{statValue}}</h1>
+<br>
+<br>
 <div class="row">
     <app-todo *ngFor="let t of listTodo" [todo]="t"
               (event)="changeEtat($event)"
               class="col-md-3">
     </app-todo>
     
-<button  id="statservice"class="btn btn-primary" (click)="getStatService()">get statistics SERVICE</button>
-<h1>{{ n }}</h1>
+
 </div>
