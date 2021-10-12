@@ -5,7 +5,7 @@ import {HomeTodoComponent} from './home-todo/home-todo.component';
 
 const ROUTES: Routes = [
   
-  {path: 'homeTodo', component: HomeTodoComponent},
+  {path: '', component: HomeTodoComponent},
 ];
 @NgModule({
   declarations: [],
