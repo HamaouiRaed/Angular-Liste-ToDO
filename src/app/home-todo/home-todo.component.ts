@@ -21,10 +21,14 @@ export class HomeTodoComponent implements OnInit {
     this.todoservice.getTodo().subscribe(
 
       (data:Todo[])=>{this.listTodo= data});
+      for (let i in this.listTodo) {
+        console.log(this.listTodo[i].completed);
   }
+}
   changeEtat(t: Todo) {
     let i = this.listTodo.indexOf(t);
     this.listTodo[i].completed = true;
+    
   }
   getStatService() {
     for (let i in this.listTodo) {
