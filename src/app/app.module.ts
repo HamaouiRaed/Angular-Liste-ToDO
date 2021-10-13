@@ -9,12 +9,14 @@ import { HomeTodoComponent } from './home-todo/home-todo.component';
 import { TodoComponent } from './todo/todo.component';
 import {HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
+import { UsersComponent } from './users/users.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeTodoComponent,
     TodoComponent,
+    UsersComponent,
   ],
   imports: [
     BrowserModule,
