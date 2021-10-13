@@ -14,7 +14,7 @@ export class HomeTodoComponent implements OnInit {
  
 
 
-  constructor(private calcul: StatCaluculService, private todoservice: TodoService,) { }
+  constructor(private calcul: StatCaluculService, private todoservice: TodoService) { }
 
   ngOnInit(): void {
 
