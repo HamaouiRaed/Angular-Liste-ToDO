@@ -16,7 +16,7 @@
                 <td>{{u.username}}</td>
                 <td>{{u.email}}</td>
                 <td>
-                    <a>
+                    <a [routerLink]="['/users',u.id]">
                         <button class="btn btn-success">voir Todo</button>
                     </a>
                 </td>

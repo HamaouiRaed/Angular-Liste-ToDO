@@ -10,6 +10,7 @@ import { TodoComponent } from './todo/todo.component';
 import {HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { UsersComponent } from './users/users.component';
+import { DetailTodoComponent } from './detail-todo/detail-todo.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { UsersComponent } from './users/users.component';
     HomeTodoComponent,
     TodoComponent,
     UsersComponent,
+    DetailTodoComponent,
   ],
   imports: [
     BrowserModule,
