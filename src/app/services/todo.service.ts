@@ -10,13 +10,13 @@ export class TodoService {
   url: string = 'https://jsonplaceholder.typicode.com/todos'
   constructor(private http: HttpClient) {
   }
-  getTodo(): Observable<Todo[]> {
+  
+  getTodos(): Observable<Todo[]> {
     return this.http.get<Todo[]>(this.url);
 
   }
-  getTodoUser(userId: number) {
-    let url = 'https://jsonplaceholder.typicode.com/todos?userId=' + userId;
-    
-    return this.http.get<Todo[]>(url);
+  
+  getTodosByUserId(userId: number) {
+    return this.http.get<Todo[]>(`${this.url}?userId=${userId}`);
   }
 }
